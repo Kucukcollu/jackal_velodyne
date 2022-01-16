@@ -7,6 +7,8 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   roscpp
   rospy
+  nav_msgs
+  geometry_msgs
 )
 
 catkin_package(
@@ -29,3 +31,6 @@ target_link_libraries(tf_publisher ${catkin_LIBRARIES})
 
 add_executable(get_set_robot_position src/get_set_robot_position.cpp)
 target_link_libraries(get_set_robot_position ${catkin_LIBRARIES})
+
+add_executable(main_node src/main_node.cc)
+target_link_libraries(main_node ${catkin_LIBRARIES})
